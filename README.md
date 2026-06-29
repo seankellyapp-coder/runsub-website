@@ -1,11 +1,12 @@
 # RunSub Website
 
-Premium Vite/React marketing site for RunSub.
+Premium public website for RunSub.
 
-## Vercel
+## Vercel settings
 
-Framework: Vite
-Install Command: corepack enable && pnpm install --no-frozen-lockfile
-Build Command: pnpm run build
-Output Directory: dist
-Root Directory: ./
+Framework: Vite  
+Install command: `corepack enable && pnpm install --no-frozen-lockfile`  
+Build command: `pnpm run build`  
+Output directory: `dist`
+
+No environment variables are required for v1.
