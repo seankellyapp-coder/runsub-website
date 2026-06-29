@@ -1,166 +1,161 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import './styles.css';
+import React from 'react'
+import { createRoot } from 'react-dom/client'
+import './styles.css'
 
-const dataPoints = ['Activities', 'Distance', 'Pace', 'Heart rate', 'Elevation', 'Cadence', 'Sleep', 'HRV', 'Recovery', 'Training load'];
-const coachNotes = ['Strong long runs', 'Threshold needs durability', 'Prefers km-based sessions', 'Do not chase missed easy miles'];
-const featureCards = [
-  ['01', 'Adaptive coach', 'Daily guidance that explains what matters, what changed and why.'],
-  ['02', 'Living plans', 'Training adapts around missed runs, fatigue, races and real life.'],
-  ['03', 'Plan reviews', 'A clear assessment of what is working, what needs attention and the next best move.'],
-  ['04', 'Race focus', 'Build towards your next sub with race-specific blocks, tapering and confidence tracking.'],
-];
+const pillars = [
+  ['Adaptive Coach', 'RunSub reviews your training like a real coach — what worked, what needs attention and what to do next.'],
+  ['Living Plans', 'Training adjusts around missed runs, fatigue, race priorities and your current phase.'],
+  ['Goal Confidence', 'A smarter confidence engine that weights long runs, key sessions, threshold work, recovery and race timing.'],
+  ['Garmin Ready', 'Built for activity import, automatic workout completion and coaching from sleep, HRV and training load.'],
+]
+
 const roadmap = [
-  ['Live in beta', 'Adaptive plans, coach chat, workout builder, race management and plan reviews.'],
-  ['Next', 'Garmin import, automatic workout completion and health-led coaching decisions.'],
-  ['Following', 'Workout sync, Apple Health, COROS, Strava, strength progression and race prediction.'],
-];
+  ['Now', 'Adaptive plans, coach chat, plan reviews, workout builder and race management.'],
+  ['Next', 'Garmin activity import, automatic workout completion and health metric analysis.'],
+  ['Later', 'Workout sync, Apple Health, COROS, strength progression and dynamic race prediction.'],
+]
 
 function App() {
-  const path = window.location.pathname;
-  if (path === '/privacy') return <Shell><Legal type="privacy" /></Shell>;
-  if (path === '/terms') return <Shell><Legal type="terms" /></Shell>;
-  if (path === '/garmin') return <Shell><Garmin /></Shell>;
-  return <Shell><Home /></Shell>;
+  return (
+    <main>
+      <Nav />
+      <Hero />
+      <Logos />
+      <CoachSection />
+      <ProductShowcase />
+      <GarminSection />
+      <Roadmap />
+      <Beta />
+      <Policies />
+      <Footer />
+    </main>
+  )
 }
 
-function Shell({ children }) {
-  return <>
-    <div className="glow glowA" />
-    <div className="glow glowB" />
-    <header className="nav">
-      <a className="brand" href="/" aria-label="RunSub home"><span className="logoMark">RS</span><span>RunSub</span></a>
-      <nav>
-        <a href="/#coach">Coach</a>
-        <a href="/garmin">Garmin</a>
-        <a href="/#roadmap">Roadmap</a>
-        <a href="/privacy">Privacy</a>
-        <a className="navButton" href="/#waitlist">Join beta</a>
-      </nav>
-    </header>
-    <main>{children}</main>
-    <footer className="footer">
-      <div className="brand small"><span className="logoMark">RS</span><span>RunSub</span></div>
-      <p>Every runner has a next sub.</p>
-      <div><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="mailto:hello@runsub.com">Contact</a></div>
-    </footer>
-  </>;
+function Nav() {
+  return <header className="nav">
+    <a className="brand" href="#top" aria-label="RunSub home"><span className="mark">RS</span><span>RunSub</span></a>
+    <nav>
+      <a href="#coach">Coach</a>
+      <a href="#garmin">Garmin</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#beta" className="navCta">Join beta</a>
+    </nav>
+  </header>
 }
 
-function Home() {
-  return <>
-    <section className="hero">
-      <div className="heroCopy reveal">
-        <p className="kicker">Adaptive AI running coach</p>
-        <h1>Your next breakthrough starts here.</h1>
-        <p className="lead">RunSub learns from your training, reviews your plan and guides you towards your next sub — from sub‑60 to sub‑3 and beyond.</p>
-        <div className="ctaRow"><a className="primary" href="#waitlist">Join the beta</a><a className="secondary" href="/garmin">Garmin coming soon</a></div>
-        <div className="trust"><span>Built for serious runners</span><span>Adaptive plans</span><span>Coach-led reviews</span></div>
+function Hero() {
+  return <section id="top" className="hero sectionGrid">
+    <div className="heroCopy reveal">
+      <div className="eyebrow">Every runner has a next sub</div>
+      <h1>The AI coach that adapts with you.</h1>
+      <p className="lede">RunSub learns from your training, reviews your progress and adjusts your plan so every week has a clear route to your next breakthrough.</p>
+      <div className="heroActions">
+        <a className="button primary" href="#beta">Join the beta</a>
+        <a className="button ghost" href="#coach">See how it works</a>
       </div>
-      <ProductStack />
-    </section>
+      <div className="proof"><span>Sub-60</span><span>Sub-40</span><span>Sub-3</span><span>Sub-2:45</span></div>
+    </div>
+    <div className="phoneStage reveal delay1" aria-hidden="true">
+      <div className="orb orbOne" />
+      <div className="phone mainPhone"><img src="/screens/home.jpg" alt="RunSub app home screen" /></div>
+      <div className="floatingCard topCard"><strong>Coach says</strong><span>Threshold is the priority this block.</span></div>
+      <div className="floatingCard bottomCard"><strong>81%</strong><span>Goal confidence</span></div>
+    </div>
+  </section>
+}
 
-    <section id="coach" className="statement reveal">
-      <p className="kicker">The coach is the product</p>
-      <h2>Not another dashboard. Not another static plan.</h2>
-      <p>RunSub is designed around one central experience: a coach that knows the runner, understands the goal, learns from every workout and makes the next decision easier.</p>
-    </section>
+function Logos() {
+  return <section className="miniBand reveal">
+    <span>Adaptive training</span><span>Race reviews</span><span>Workout builder</span><span>Recovery strategy</span><span>Garmin integration</span>
+  </section>
+}
 
-    <section className="features">
-      {featureCards.map(([num, title, text]) => <article className="feature reveal" key={title}><span>{num}</span><h3>{title}</h3><p>{text}</p></article>)}
-    </section>
-
-    <section className="coachPanel reveal">
-      <div>
-        <p className="kicker">Coach memory</p>
-        <h2>It should feel like someone has been coaching you for months.</h2>
-        <p>RunSub turns training history into coach notes: strengths, weak spots, recovery patterns, preferences and race risks.</p>
+function CoachSection() {
+  return <section id="coach" className="coach sectionGrid compact">
+    <div className="panel glow reveal">
+      <div className="chatBubble muted">Morning Sean. Threshold today.</div>
+      <div className="chatBubble">Last week's session was harder than expected. Focus on accumulating time rather than chasing pace.</div>
+      <div className="quickGrid"><button>Replace session</button><button>Move run</button><button>Keep plan</button><button>Ask coach</button></div>
+    </div>
+    <div className="copy reveal delay1">
+      <div className="eyebrow">The coach is the product</div>
+      <h2>Not another dashboard. A coach that notices things.</h2>
+      <p>RunSub turns your training data into practical coaching: what to protect, what to improve and when to push.</p>
+      <div className="featureList">
+        {pillars.map(([t,d]) => <article key={t}><h3>{t}</h3><p>{d}</p></article>)}
       </div>
-      <div className="noteList">
-        {coachNotes.map(note => <div key={note}><span>✓</span>{note}</div>)}
-      </div>
-    </section>
+    </div>
+  </section>
+}
 
-    <section className="reviewShowcase reveal">
+function ProductShowcase() {
+  return <section className="showcase reveal">
+    <div className="sectionHeader">
+      <div className="eyebrow">Plan review dashboard</div>
+      <h2>Two screens. Three answers.</h2>
+      <p>Are you on track? Why? What should you do next?</p>
+    </div>
+    <div className="screens">
+      <div className="phone"><img src="/screens/progress.png" alt="RunSub progress review" /></div>
       <div className="reviewCard">
-        <div className="cardTop"><span>Plan Review</span><strong>81%</strong></div>
-        <h3>Building well</h3>
-        <p>Your marathon goal remains realistic. Threshold durability is the priority for the next block.</p>
-        <div className="scoreGrid"><div><b>2:47–2:49</b><span>Projection</span></div><div><b>84%</b><span>After change</span></div></div>
-        <button>Accept coach recommendation</button>
+        <span className="pill">Recommended route</span>
+        <h3>Keep building</h3>
+        <p>Your goal remains achievable. Threshold durability is the biggest opportunity over the next block.</p>
+        <div className="metrics"><span><b>2:47–2:49</b>Projection</span><span><b>84%</b>Expected confidence</span></div>
+        <a href="#beta" className="button primary small">Accept recommendation</a>
       </div>
-      <div>
-        <p className="kicker">Plan Review</p>
-        <h2>Know where you stand in seconds.</h2>
-        <p>RunSub reviews past training, current fatigue, future structure and race goals. Then it offers a clear next move — not a wall of numbers.</p>
+      <div className="phone secondary"><img src="/screens/review.png" alt="RunSub coach review" /></div>
+    </div>
+  </section>
+}
+
+function GarminSection() {
+  return <section id="garmin" className="garmin sectionGrid compact">
+    <div className="copy reveal">
+      <div className="eyebrow">Garmin integration</div>
+      <h2>Real data. Better decisions.</h2>
+      <p>RunSub is being prepared to connect with Garmin so the coach can react to activities, recovery, sleep, HRV and training load.</p>
+      <div className="dataGrid">
+        {['Activities','Heart rate','Elevation','Cadence','Sleep','HRV','Training load','Recovery'].map(x => <span key={x}>{x}</span>)}
       </div>
-    </section>
-
-    <section className="garminTeaser reveal">
-      <div>
-        <p className="kicker">Garmin integration</p>
-        <h2>Garmin data should make the coach smarter.</h2>
-        <p>Activities and recovery signals will help RunSub complete workouts automatically, understand readiness and adapt training before problems become injuries.</p>
-        <a className="inlineLink" href="/garmin">See Garmin plan →</a>
-      </div>
-      <div className="dataCloud">{dataPoints.map(point => <span key={point}>{point}</span>)}</div>
-    </section>
-
-    <section id="roadmap" className="roadmap reveal">
-      <p className="kicker">Roadmap</p>
-      <h2>From beta to intelligent coaching platform.</h2>
-      <div className="roadItems">{roadmap.map(([phase, body]) => <div key={phase}><strong>{phase}</strong><p>{body}</p></div>)}</div>
-    </section>
-
-    <section id="waitlist" className="waitlist reveal">
-      <p className="kicker">Beta access</p>
-      <h2>Join the RunSub beta.</h2>
-      <p>Early access for runners who want adaptive plans, plan reviews and Garmin-powered coaching.</p>
-      <form action="mailto:hello@runsub.com" method="post" encType="text/plain">
-        <input name="email" type="email" placeholder="Email address" required />
-        <input name="goal" type="text" placeholder="Goal e.g. Sub‑3 marathon" />
-        <button type="submit">Request invite</button>
-      </form>
-      <small>This temporary form opens your email client. Replace with Supabase/Resend when ready.</small>
-    </section>
-  </>;
+    </div>
+    <div className="panel apiCard reveal delay1">
+      <div className="apiLine"><span>GET</span>/activities</div>
+      <div className="apiLine"><span>SYNC</span>planned workout</div>
+      <div className="apiLine"><span>READ</span>sleep + HRV</div>
+      <div className="apiLine active"><span>COACH</span>adjust next session</div>
+    </div>
+  </section>
 }
 
-function ProductStack() {
-  return <div className="productStack reveal" aria-label="RunSub product screenshots">
-    <div className="phone phoneBack"><img src="/screens/progress.png" alt="RunSub progress dashboard preview" /></div>
-    <div className="phone phoneFront"><img src="/screens/review.png" alt="RunSub plan review preview" /></div>
-    <div className="floatingMetric"><span>Today</span><b>Threshold focus</b></div>
-    <div className="floatingMetric second"><span>Next race</span><b>84 days</b></div>
-  </div>;
+function Roadmap() {
+  return <section id="roadmap" className="roadmap reveal">
+    <div className="sectionHeader"><div className="eyebrow">Roadmap</div><h2>Built around one idea.</h2><p>The coach gets smarter every time you train.</p></div>
+    <div className="roadGrid">{roadmap.map(([t,d],i) => <article key={t}><span>0{i+1}</span><h3>{t}</h3><p>{d}</p></article>)}</div>
+  </section>
 }
 
-function Garmin() {
-  return <>
-    <section className="pageHero reveal">
-      <p className="kicker">Garmin coming soon</p>
-      <h1>Device data interpreted by a coach.</h1>
-      <p className="lead">RunSub plans to use Garmin Connect data to import training, complete planned workouts and personalise recommendations using readiness signals.</p>
-    </section>
-    <section className="garminGrid reveal">
-      <article><h3>Activity import</h3><p>Distance, pace, heart rate, elevation, cadence and calories used to match planned workouts to completed runs.</p></article>
-      <article><h3>Health signals</h3><p>Sleep, HRV, recovery and training load used to support better decisions around intensity and recovery.</p></article>
-      <article><h3>User control</h3><p>Users connect Garmin by consent, can disconnect at any time, and should always know what data improves coaching.</p></article>
-    </section>
-    <section className="statement reveal"><p className="kicker">Why Garmin</p><h2>The goal is not more graphs.</h2><p>The goal is a coach that can say: poor sleep and falling HRV means we should protect today, or excellent recovery means you can safely progress.</p></section>
-  </>;
+function Beta() {
+  return <section id="beta" className="beta reveal">
+    <div><div className="eyebrow">Join the beta</div><h2>Be first to test RunSub.</h2><p>Leave your details and we'll invite early runners as the product moves towards Garmin-connected coaching.</p></div>
+    <form onSubmit={(e)=>{e.preventDefault(); alert('Thanks — waitlist form placeholder. Connect this to Supabase or Formspree next.')}}>
+      <input aria-label="Email" type="email" placeholder="Email address" required />
+      <input aria-label="Goal" placeholder="Next goal e.g. Dublin sub-2:45" />
+      <button className="button primary" type="submit">Request access</button>
+    </form>
+  </section>
 }
 
-function Legal({ type }) {
-  const privacy = type === 'privacy';
-  return <section className="legal reveal">
-    <p className="kicker">RunSub</p>
-    <h1>{privacy ? 'Privacy Policy' : 'Terms of Service'}</h1>
-    <p className="muted">Draft starter text. Review with a solicitor before public launch.</p>
-    {privacy ? <Privacy /> : <Terms />}
-  </section>;
+function Policies() {
+  return <section className="policies reveal">
+    <article id="privacy"><h2>Privacy</h2><p>RunSub only uses training and account data to provide coaching, plan adaptation and product support. Garmin or wearable data will only be accessed with user permission and can be disconnected by the user.</p></article>
+    <article id="terms"><h2>Terms</h2><p>RunSub provides training guidance and performance tracking. It is not medical advice. Users should train responsibly and seek professional advice where health, injury or medical concerns apply.</p></article>
+  </section>
 }
-function Privacy() { return <div className="legalBody"><h2>Overview</h2><p>RunSub is designed to help runners plan, review and adapt training. We aim to collect only information needed to provide coaching, training analytics and account functionality.</p><h2>Data we may collect</h2><p>Account details, training goals, workouts, race plans, readiness feedback, connected device data where authorised, waitlist details and support messages.</p><h2>How we use data</h2><p>To generate plans, personalise coaching, complete workouts, improve recommendations, provide support and maintain the service.</p><h2>Garmin data</h2><p>If Garmin connection is enabled, RunSub may request activity and health data only with user consent. Users should be able to disconnect Garmin access at any time.</p><h2>Contact</h2><p>Email: hello@runsub.com</p></div> }
-function Terms() { return <div className="legalBody"><h2>Use of RunSub</h2><p>RunSub provides training guidance and planning support. It is not medical advice and does not replace a qualified coach, doctor or physiotherapist.</p><h2>User responsibility</h2><p>Users are responsible for deciding whether a workout is appropriate and should stop if they experience pain, illness, dizziness or unsafe conditions.</p><h2>Beta service</h2><p>Features may change, break or be removed during beta. Training recommendations may be inaccurate and should be reviewed carefully.</p><h2>Contact</h2><p>Email: hello@runsub.com</p></div> }
 
-createRoot(document.getElementById('root')).render(<App />);
+function Footer() {
+  return <footer><div className="brand"><span className="mark">RS</span><span>RunSub</span></div><span>© {new Date().getFullYear()} RunSub. The coach that adapts with you.</span></footer>
+}
+
+createRoot(document.getElementById('root')).render(<App />)
