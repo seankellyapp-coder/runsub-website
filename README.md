@@ -1,11 +1,11 @@
 # RunSub Website
 
-Premium Vite/React marketing site for RunSub.com.
+Premium Vite/React marketing site for RunSub.
 
-## Deploy
+## Vercel
 
-- Framework: Vite
-- Root Directory: `/` or blank
-- Install Command: `npm install`
-- Build Command: `npm run build`
-- Output Directory: `dist`
+Framework: Vite
+Install Command: corepack enable && pnpm install --no-frozen-lockfile
+Build Command: pnpm run build
+Output Directory: dist
+Root Directory: ./
