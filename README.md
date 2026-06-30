@@ -1,6 +1,6 @@
-# RunSub Website v1.5
+# RunSub Website v1.6
 
-Reliable static build with the agreed RUNSUB primary logo direction and premium phone/watch hero.
+Static dependency-free website build using the agreed RUNSUB logo asset cropped from the supplied brand board.
 
 Vercel settings:
 - Framework: Other

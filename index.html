@@ -3,173 +3,118 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="RunSub is an adaptive running coach that learns how you train." />
-    <title>RunSub — Adaptive Running Coach</title>
+    <title>RunSub | Adaptive Running Coach</title>
+    <meta name="description" content="RunSub is the adaptive running coach that learns how you train, using your goals, recovery and training data to evolve your plan." />
+    <link rel="preload" as="image" href="/assets/runsub-primary-logo.png" />
     <link rel="stylesheet" href="/src/styles.css" />
   </head>
   <body>
     <div class="site-shell">
       <header class="topbar">
         <a class="brand" href="#top" aria-label="RunSub home">
-          <span class="rs-icon">RS</span>
-          <span class="brand-word" aria-label="RUNSUB"><span>RUN</span><span>SUB</span></span>
+          <img src="/assets/runsub-rs-icon-dark.png" alt="RunSub RS icon" class="brand-icon" />
+          <img src="/assets/runsub-primary-logo.png" alt="RUNSUB Adaptive Running Coach" class="brand-wordmark" />
         </a>
-        <nav class="nav-links">
+        <nav class="nav" aria-label="Primary navigation">
           <a href="#features">Features</a>
           <a href="#coach">Coach</a>
           <a href="#garmin">Garmin</a>
           <a href="#roadmap">Roadmap</a>
-          <a href="#about">About</a>
+          <a href="#privacy">Privacy</a>
         </nav>
-        <a class="nav-cta" href="#beta">Join Beta <span>→</span></a>
+        <a class="cta small" href="mailto:hello@runsub.com?subject=RunSub%20Beta">Join Beta <span>→</span></a>
       </header>
 
       <main id="top">
         <section class="hero section-pad">
           <div class="hero-copy">
-            <div class="eyebrow"><span>✦</span> Adaptive Running Coach</div>
+            <div class="eyebrow">✦ Adaptive Running Coach</div>
             <h1>The running coach that <span>learns</span> how you train.</h1>
             <p class="lead">Static plans don’t adapt. RunSub does. Personalised training that evolves with your goals, recovery and real life.</p>
             <div class="hero-actions">
-              <a class="btn primary" href="#beta">Join Beta <span>→</span></a>
-              <a class="btn ghost" href="#coach">See Coach Review</a>
+              <a class="cta" href="mailto:hello@runsub.com?subject=RunSub%20Beta">Join Beta <span>→</span></a>
+              <a class="ghost" href="#coach">See Coach Review</a>
             </div>
-            <div class="trust-row">
-              <div class="avatar-stack" aria-hidden="true">
-                <span></span><span></span><span></span><span></span><span></span>
-              </div>
+            <div class="proof-row">
+              <div class="avatars" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
               <div class="stars">★★★★★</div>
               <strong>Built for runners chasing their next sub.</strong>
             </div>
           </div>
 
-          <div class="hero-visual" aria-label="RunSub app and Garmin data visual">
+          <div class="hero-visual" aria-label="RunSub app and Garmin data illustration">
+            <div class="data-flow flow-left">
+              <div class="flow-card"><strong>Garmin data</strong><span>Sleep, HRV, Load</span></div>
+              <div class="arrow">↓</div>
+              <div class="flow-card"><strong>RunSub Coach</strong><span>Reads the pattern</span></div>
+              <div class="arrow">↓</div>
+              <div class="flow-card"><strong>Adaptive Plan</strong><span>Smarter training</span></div>
+            </div>
             <div class="wave wave-a"></div>
-            <div class="wave wave-b"></div>
             <div class="phone-wrap">
-              <div class="phone-frame">
+              <div class="phone">
+                <div class="phone-notch"></div>
                 <div class="phone-screen">
-                  <div class="status-line"><span>Today</span><span>9:41</span></div>
-                  <small>Tuesday, Jun 24</small>
-                  <div class="mini-card coach-summary">
-                    <div>
-                      <b>Coach Summary</b>
-                      <p>Great consistency this week. You’re building fitness the right way.</p>
-                    </div>
-                    <em>On Track</em>
-                  </div>
-                  <div class="workout-card">
-                    <div class="workout-head"><b>Threshold Intervals</b><em>Quality</em></div>
-                    <div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-                    <p>4 × 8 min @ Threshold<br/>2 min easy jog</p>
-                    <div class="metrics"><span>10.2 km</span><span>~1:05</span></div>
-                    <button>View Workout</button>
-                  </div>
-                  <div class="week-card">
-                    <b>Weekly Overview</b>
-                    <span>72 / 90 km</span>
-                    <div><i></i></div>
-                  </div>
-                  <div class="bottom-nav"><span></span><span></span><span></span><span></span><span></span></div>
+                  <div class="phone-status"><span>Today</span><span>9:41</span></div>
+                  <div class="coach-card"><small>Coach Summary</small><b>Great consistency this week. You’re building fitness the right way.</b><em>On Track</em></div>
+                  <div class="workout-card"><div><small>Today's Workout</small><b>Threshold Intervals</b></div><div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i></div><p>4 × 8 min @ Threshold<br/>2 min easy jog</p><button>View Workout</button></div>
+                  <div class="progress-card"><span>Weekly Overview</span><b>72 / 90 km</b><div><i></i></div></div>
                 </div>
               </div>
-            </div>
-
-            <div class="watch">
-              <div class="watch-lug top"></div>
-              <div class="watch-face">
-                <small>GARMIN</small>
-                <strong>7h 45m</strong>
-                <span>Sleep Score</span>
-                <b>82 <em>Good</em></b>
-                <div class="hrv-line"><i></i></div>
-                <p>HRV Balance<br/>Balanced 42 ms</p>
+              <div class="watch">
+                <div class="watch-face"><small>GARMIN</small><b>7h 45m</b><span>Sleep Score</span><strong>82</strong><em>HRV Balance</em><div class="hrv-line"></div></div>
               </div>
-              <div class="watch-lug bottom"></div>
             </div>
-
-            <div class="flow-card flow-one"><b>GARMIN DATA</b><span>Sleep, HRV, Load</span></div>
-            <div class="flow-arrow one">↓</div>
-            <div class="flow-card flow-two"><b>RUNSUB COACH</b><span>Reads the pattern</span></div>
-            <div class="flow-arrow two">↓</div>
-            <div class="flow-card flow-three"><b>ADAPTIVE PLAN</b><span>Smarter training</span></div>
           </div>
         </section>
 
-        <section class="integrations container">
+        <section class="integration-bar">
           <span>Built to integrate. Designed to adapt.</span>
-          <b>GARMIN</b>
-          <b>COROS</b>
-          <b>STRAVA</b>
-          <b>TRAININGPEAKS</b>
-          <b> Health</b>
+          <b>GARMIN</b><b>COROS</b><b>STRAVA</b><b>TRAININGPEAKS</b><b> Health</b>
         </section>
 
-        <section id="features" class="feature-grid container section-pad-sm">
-          <div class="section-intro">
-            <p class="kicker">Coach. Adapt. Improve.</p>
-            <h2>Training that adapts to you.</h2>
-          </div>
-          <article><div>🧠</div><h3>Adaptive Coach</h3><p>Not just a plan. A coach that understands your training, recovery and goals.</p><a href="#coach">Learn more →</a></article>
-          <article><div>▮▮▮</div><h3>Adaptive Plans</h3><p>Workouts adjust based on how you feel, how you perform and what life throws at you.</p><a href="#coach">Learn more →</a></article>
-          <article><div>⌚</div><h3>Garmin Connected</h3><p>Your data fuels the coach. Sleep, HRV, load and more drive smarter decisions.</p><a href="#garmin">Learn more →</a></article>
-          <article><div>⚑</div><h3>Race Ready</h3><p>From 5K to marathon, RunSub builds you up, tapers you right, and gets you ready.</p><a href="#roadmap">Learn more →</a></article>
-        </section>
-
-        <section id="coach" class="review-section container section-pad-sm">
+        <section id="features" class="split section-pad compact">
           <div>
-            <p class="kicker">Plan Review</p>
-            <h2>Your coach turns training data into next actions.</h2>
-            <p>RunSub reviews past execution, current fitness, upcoming load and race goals — then recommends the next move that matters.</p>
+            <div class="eyebrow">Coach. Adapt. Improve.</div>
+            <h2>Training that adapts to you.</h2>
+            <p>RunSub brings your plan, logged runs, readiness and race goals into one coach-led system.</p>
           </div>
-          <div class="review-card">
-            <div class="review-top"><span>Building Well</span><b>81%</b></div>
-            <div class="review-row"><span>Projection</span><b>2:47–2:49</b></div>
-            <div class="review-row"><span>Main limiter</span><b>Threshold</b></div>
-            <p>The goal remains achievable. Protect quality sessions and avoid chasing missed easy mileage.</p>
-            <button>Accept recommendation</button>
+          <div class="feature-grid">
+            <article><span>◌</span><h3>Adaptive Plans</h3><p>Workouts adjust based on how you feel, how you perform and what life throws at you.</p></article>
+            <article><span>▥</span><h3>Plan Reviews</h3><p>Past execution, current outlook and future structure in one practical coach review.</p></article>
+            <article><span>↗</span><h3>Race Ready</h3><p>From B-race checks to A-race tapering, RunSub keeps the main goal in view.</p></article>
           </div>
         </section>
 
-        <section id="garmin" class="garmin-section container section-pad-sm">
-          <p class="kicker">Garmin Integration</p>
-          <h2>Wearable data becomes coaching intelligence.</h2>
-          <div class="garmin-flow">
-            <div><b>Garmin</b><span>Runs, sleep, HRV, load</span></div>
-            <div><b>RunSub Coach</b><span>Interprets readiness and progress</span></div>
-            <div><b>Adaptive Plan</b><span>Adjusts before problems build</span></div>
+        <section id="coach" class="coach-review section-pad compact">
+          <div class="glass-card wide">
+            <div class="eyebrow">Coach Review</div>
+            <div class="review-grid">
+              <div><h2>Know what matters next.</h2><p>Not another dashboard of numbers. RunSub turns training data into a clear next move.</p></div>
+              <div class="review-card"><div><span>Building Well</span><b>81%</b></div><p>Projection: <strong>2:47–2:49</strong></p><p>Main limiter: <strong>Threshold</strong></p><button>Accept recommendation</button></div>
+            </div>
           </div>
         </section>
 
-        <section id="roadmap" class="roadmap container section-pad-sm">
-          <div class="section-intro">
-            <p class="kicker">Roadmap</p>
-            <h2>The coach is the product.</h2>
-            <p>Everything we build feeds the coach: plans, Garmin, reviews, workout sync and race intelligence.</p>
-          </div>
-          <div class="roadmap-grid">
-            <article><span>Now</span><h3>Adaptive Plans</h3><p>Coach-led planning, reviews and recommendations.</p></article>
-            <article><span>Next</span><h3>Garmin Sync</h3><p>Import activities and readiness data automatically.</p></article>
-            <article><span>Later</span><h3>Workout Sync</h3><p>Send structured workouts to Garmin, COROS and Apple.</p></article>
+        <section id="garmin" class="garmin section-pad compact">
+          <div class="glass-card garmin-card">
+            <div><div class="eyebrow">Garmin Integration</div><h2>Wearable data becomes coaching intelligence.</h2><p>Runs, sleep, HRV, load and recovery should not just sit in charts. RunSub uses them to guide the plan.</p></div>
+            <div class="steps"><div><b>Garmin</b><span>Runs, sleep, HRV, load</span></div><div><b>RunSub Coach</b><span>Interprets readiness and progress</span></div><div><b>Adaptive Plan</b><span>Adjusts before problems build</span></div></div>
           </div>
         </section>
 
-        <section id="beta" class="beta container section-pad-sm">
-          <p class="kicker">Join Beta</p>
-          <h2>Built for runners chasing their next breakthrough.</h2>
-          <p>Beta signup form coming soon. For now, RunSub is preparing for private testing and Garmin developer approval.</p>
-          <a class="btn primary" href="mailto:hello@runsub.com">Contact RunSub <span>→</span></a>
+        <section id="roadmap" class="roadmap section-pad compact">
+          <div class="eyebrow">Roadmap</div>
+          <h2>The coach is the product.</h2>
+          <div class="road-grid"><article><small>Now</small><b>Adaptive Coach</b><p>Plan reviews, daily guidance and smart changes.</p></article><article><small>Next</small><b>Garmin Sync</b><p>Activity import, automatic completion and readiness signals.</p></article><article><small>Future</small><b>Workout Export</b><p>Send structured sessions to Garmin, COROS and Apple.</p></article></div>
+        </section>
+
+        <section id="privacy" class="privacy section-pad compact">
+          <div class="glass-card wide"><div class="eyebrow">Privacy-first coaching</div><h2>Your training data should serve your coaching, not advertising.</h2><p>RunSub will only request the data needed to personalise training, explain how it is used, and allow users to disconnect integrations.</p><div class="hero-actions"><a class="ghost" href="#">Privacy Policy</a><a class="ghost" href="#">Terms</a><a class="ghost" href="mailto:hello@runsub.com">Contact</a></div></div>
         </section>
       </main>
 
-      <footer id="about" class="footer container">
-        <div class="brand footer-brand">
-          <span class="rs-icon">RS</span>
-          <span class="brand-word"><span>RUN</span><span>SUB</span></span>
-        </div>
-        <p>Adaptive Running Coach. Built for the next sub.</p>
-        <small>© 2026 RunSub. All rights reserved.</small>
-      </footer>
+      <footer class="footer"><img src="/assets/runsub-rs-icon-dark.png" alt="RunSub" /><div><strong>RunSub</strong><p>Adaptive Running Coach. Built for the next sub.</p></div><span>© 2026 RunSub</span></footer>
     </div>
     <script src="/src/main.js"></script>
   </body>

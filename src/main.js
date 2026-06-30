@@ -1,10 +1,10 @@
-const observer = new IntersectionObserver((entries) => {
+const reveal = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    if (entry.isIntersecting) entry.target.classList.add('show');
-  });
-}, { threshold: 0.12 });
+    if (entry.isIntersecting) entry.target.classList.add('visible')
+  })
+}, { threshold: 0.12 })
 
-document.querySelectorAll('section, article, .review-card').forEach((el) => {
-  el.classList.add('reveal');
-  observer.observe(el);
-});
+document.querySelectorAll('.glass-card, .feature-grid article, .road-grid article, .integration-bar').forEach((el) => {
+  el.classList.add('reveal')
+  reveal.observe(el)
+})
