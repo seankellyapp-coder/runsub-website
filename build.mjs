@@ -1,7 +1,6 @@
-import { cp, mkdir } from 'fs/promises';
-import { existsSync } from 'fs';
-await mkdir('dist', { recursive: true });
-await cp('index.html', 'dist/index.html');
-await mkdir('dist/src', { recursive: true });
-await cp('src', 'dist/src', { recursive: true });
-if (existsSync('public')) await cp('public', 'dist', { recursive: true });
+import fs from 'fs';
+fs.rmSync('dist', { recursive: true, force: true });
+fs.mkdirSync('dist', { recursive: true });
+fs.cpSync('index.html', 'dist/index.html');
+fs.cpSync('src', 'dist/src', { recursive: true });
+fs.cpSync('public/assets', 'dist/assets', { recursive: true });
