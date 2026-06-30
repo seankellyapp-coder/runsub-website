@@ -18,7 +18,7 @@
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#features">Features</a>
         <a href="#coach">Coach</a>
-        <a href="#garmin">Garmin</a>
+        <a href="#integrations">Integrations</a>
         <a href="#roadmap">Roadmap</a>
         <a href="#about">About</a>
       </nav>
@@ -43,17 +43,22 @@
           </div>
         </div>
 
-        <div class="hero-visual reveal delay">
-          <img class="device-system" src="/assets/hero-device-system.png" alt="RunSub phone interface, Garmin watch and adaptive data flow" />
+        <div class="hero-visual reveal delay" aria-hidden="true">
+          <img class="device-system" src="/assets/hero-device-system-clean.png" alt="" />
         </div>
 
-        <div class="integration-strip reveal delay-2" aria-label="Planned integrations">
-          <strong>Built to integrate. Designed to adapt.</strong>
-          <img class="partner-logo garmin-logo" src="/assets/integrations/garmin.svg" alt="Garmin" />
-          <img class="partner-logo coros-logo" src="/assets/integrations/coros.svg" alt="COROS" />
-          <img class="partner-logo strava-logo" src="/assets/integrations/strava.svg" alt="Strava" />
-          <img class="partner-logo trainingpeaks-logo" src="/assets/integrations/trainingpeaks.svg" alt="TrainingPeaks" />
-          <img class="partner-logo apple-logo" src="/assets/integrations/apple-health.svg" alt="Apple Health" />
+        <div id="integrations" class="integration-strip reveal delay-2" aria-label="Planned integrations">
+          <div class="integration-copy">
+            <span>Designed to integrate with</span>
+            <strong>the platforms runners already use.</strong>
+          </div>
+          <div class="integration-names" aria-label="Planned integrations list">
+            <span>Garmin</span>
+            <span>COROS</span>
+            <span>Strava</span>
+            <span>TrainingPeaks</span>
+            <span>Apple Health</span>
+          </div>
         </div>
       </section>
 
@@ -96,12 +101,12 @@
 
       <section id="garmin" class="section-shell garmin-section">
         <div>
-          <p class="kicker">Garmin Integration</p>
-          <h2>Garmin data becomes coaching intelligence.</h2>
-          <p>Activities, pace, heart rate, elevation, cadence, sleep, HRV and recovery data help RunSub adapt training in context.</p>
+          <p class="kicker">Integration roadmap</p>
+          <h2>Training data becomes coaching intelligence.</h2>
+          <p>Activities, pace, heart rate, elevation, cadence, sleep, HRV and recovery data will help RunSub adapt training in context as integrations are approved.</p>
         </div>
         <div class="flow-stack">
-          <div><strong>Garmin</strong><span>Runs, sleep, HRV, load</span></div>
+          <div><strong>Training data</strong><span>Runs, sleep, HRV, load</span></div>
           <div><strong>RunSub Coach</strong><span>Interprets readiness and progress</span></div>
           <div><strong>Adaptive Plan</strong><span>Adjusts sessions before problems build</span></div>
         </div>
@@ -111,11 +116,11 @@
         <div class="section-intro narrow">
           <p class="kicker">Roadmap</p>
           <h2>The coach is the product.</h2>
-          <p>Everything we build feeds the coach: plans, Garmin, reviews, workout sync and race intelligence.</p>
+          <p>Everything we build feeds the coach: plans, integrations, reviews, workout sync and race intelligence.</p>
         </div>
         <div class="roadmap-grid">
           <div><span>Now</span><strong>Adaptive plans</strong><p>Coach reviews and smart recommendations.</p></div>
-          <div><span>Next</span><strong>Garmin sync</strong><p>Automatic activity import and completion.</p></div>
+          <div><span>Next</span><strong>Garmin Connect</strong><p>Apply, approve and import activities automatically.</p></div>
           <div><span>Then</span><strong>Workout export</strong><p>Send structured sessions to devices.</p></div>
           <div><span>Future</span><strong>Race intelligence</strong><p>Dynamic projections and adaptive tapering.</p></div>
         </div>
