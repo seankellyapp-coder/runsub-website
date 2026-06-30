@@ -1,5 +1,3 @@
-# RunSub Website v2.6 Hero Polish
+# RunSub website v2.8 real header gap fix
 
-Polished hero spacing, reduced hero artwork size, moved artwork right, softened/largened wave, and balanced CTA height.
-
-Vercel settings: Framework Other, Install `npm install`, Build `npm run build`, Output `dist`.
+Only change: moves the full hero composition noticeably closer to the header by removing grid vertical centering and reducing the hero top spacing.
