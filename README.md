@@ -1,19 +1,9 @@
-# RunSub Website v1.4 Premium Rebuild
+# RunSub Website v1.5
 
-Dependency-light production website for RunSub.com.
+Reliable static build with the agreed RUNSUB primary logo direction and premium phone/watch hero.
 
-## Vercel settings
-
-- Framework Preset: Other
-- Install Command: npm install
-- Build Command: npm run build
-- Output Directory: dist
-- Environment Variables: none
-
-## Local build
-
-```bash
-npm install
-npm run build
-npm start
-```
+Vercel settings:
+- Framework: Other
+- Install: npm install
+- Build: npm run build
+- Output: dist

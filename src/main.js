@@ -1,5 +1,10 @@
-const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{ if(entry.isIntersecting) entry.target.classList.add('visible'); });
-},{threshold:.12});
-reveals.forEach(el=>observer.observe(el));
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) entry.target.classList.add('show');
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('section, article, .review-card').forEach((el) => {
+  el.classList.add('reveal');
+  observer.observe(el);
+});

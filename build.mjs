@@ -1,10 +1,6 @@
-import fs from 'fs';
-import path from 'path';
-const root = process.cwd();
-const dist = path.join(root, 'dist');
-fs.rmSync(dist, { recursive: true, force: true });
-fs.mkdirSync(dist, { recursive: true });
-for (const file of ['index.html']) fs.copyFileSync(path.join(root, file), path.join(dist, file));
-fs.cpSync(path.join(root, 'src'), path.join(dist, 'src'), { recursive: true });
-if (fs.existsSync(path.join(root, 'public'))) fs.cpSync(path.join(root, 'public'), path.join(dist, 'public'), { recursive: true });
-console.log('RunSub website built to dist');
+import { mkdirSync, copyFileSync, cpSync, existsSync } from 'fs';
+import { join } from 'path';
+mkdirSync('dist', { recursive: true });
+copyFileSync('index.html', join('dist', 'index.html'));
+if (existsSync('src')) cpSync('src', join('dist', 'src'), { recursive: true });
+if (existsSync('public')) cpSync('public', join('dist'), { recursive: true });
