@@ -1,10 +1,9 @@
-# RunSub Website v2.2
+# RunSub Website v2.3 — Brand Safe Visual
 
-Premium hero update with agreed RUNSUB logo, safer text-only planned integrations strip, and a cleaner phone/watch composition.
+Hero refined with no third-party branding in device art, no bounce animation, separated ecosystem orbit, and more visual follow-on sections.
 
-## Vercel settings
-
-Framework: Other  
-Install: `npm install`  
-Build: `npm run build`  
-Output: `dist`
+Vercel settings:
+- Framework: Other
+- Install: npm install
+- Build: npm run build
+- Output: dist
