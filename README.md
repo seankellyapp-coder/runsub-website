@@ -1,6 +1,10 @@
-# RunSub Website v2.3 — Brand Safe Visual
+# RunSub Website v2.4 Premium Graphics
 
-Hero refined with no third-party branding in device art, no bounce animation, separated ecosystem orbit, and more visual follow-on sections.
+Brand-safe premium graphics pass:
+- Restores stronger hero imagery using a RunSub-branded phone/watch visual asset.
+- Removes third-party branding from the hero/watch.
+- Moves integrations into a separate text-only ecosystem section.
+- Adds more visual treatment to Why RunSub, Coach and Roadmap sections.
 
 Vercel settings:
 - Framework: Other
