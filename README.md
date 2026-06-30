@@ -1,13 +1,5 @@
-# RunSub Website v2.4 Premium Graphics
+# RunSub Website v2.6 Hero Polish
 
-Brand-safe premium graphics pass:
-- Restores stronger hero imagery using a RunSub-branded phone/watch visual asset.
-- Removes third-party branding from the hero/watch.
-- Moves integrations into a separate text-only ecosystem section.
-- Adds more visual treatment to Why RunSub, Coach and Roadmap sections.
+Polished hero spacing, reduced hero artwork size, moved artwork right, softened/largened wave, and balanced CTA height.
 
-Vercel settings:
-- Framework: Other
-- Install: npm install
-- Build: npm run build
-- Output: dist
+Vercel settings: Framework Other, Install `npm install`, Build `npm run build`, Output `dist`.
