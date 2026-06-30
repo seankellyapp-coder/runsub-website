@@ -1,6 +1,6 @@
-# RunSub Website v1.6
+# RunSub Website v2.0 Hero Match
 
-Static dependency-free website build using the agreed RUNSUB logo asset cropped from the supplied brand board.
+Dependency-light production website package matching the approved dark RunSub hero direction.
 
 Vercel settings:
 - Framework: Other

@@ -1,10 +1,7 @@
-const reveal = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    if (entry.isIntersecting) entry.target.classList.add('visible')
+    if (entry.isIntersecting) entry.target.classList.add('is-visible')
   })
 }, { threshold: 0.12 })
 
-document.querySelectorAll('.glass-card, .feature-grid article, .road-grid article, .integration-bar').forEach((el) => {
-  el.classList.add('reveal')
-  reveal.observe(el)
-})
+document.querySelectorAll('.reveal, .feature-card, .glass-large, .garmin-section, .roadmap-grid > div, .privacy-card').forEach((el) => observer.observe(el))
