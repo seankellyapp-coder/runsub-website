@@ -1,14 +1,13 @@
-import http from 'node:http';
-import fs from 'node:fs';
-import path from 'node:path';
+import http from 'http';
+import fs from 'fs';
+import path from 'path';
 const root = process.cwd();
-const server = http.createServer((req, res) => {
-  const urlPath = req.url === '/' ? '/index.html' : req.url;
-  const file = path.join(root, urlPath.replace(/^\//, ''));
+const port = process.env.PORT || 4173;
+const types = {'.html':'text/html','.css':'text/css','.js':'text/javascript','.png':'image/png','.jpg':'image/jpeg','.svg':'image/svg+xml'};
+http.createServer((req,res)=>{
+  const url = req.url === '/' ? '/index.html' : req.url.split('?')[0];
+  const file = path.join(root, url);
   if (!file.startsWith(root) || !fs.existsSync(file)) { res.writeHead(404); res.end('Not found'); return; }
-  const ext = path.extname(file);
-  const types = { '.html':'text/html', '.css':'text/css', '.js':'text/javascript', '.png':'image/png', '.svg':'image/svg+xml' };
-  res.writeHead(200, { 'Content-Type': types[ext] || 'application/octet-stream' });
+  res.writeHead(200, {'Content-Type': types[path.extname(file)] || 'text/plain'});
   fs.createReadStream(file).pipe(res);
-});
-server.listen(4173, () => console.log('http://localhost:4173'));
+}).listen(port, ()=>console.log(`RunSub site on http://localhost:${port}`));
