@@ -1,22 +1,20 @@
-# RunSub Website v3.2 — UI/Text Readiness
+# RunSub Website v4.0 — Clean Asset Fix
 
-Build updates:
-- CTA wording changed to “Request Beta Access”.
-- Added trust signal strip under hero.
-- Integration cards are safer, name-only, and marked “Coming soon”.
-- Roadmap wording softened around device sync and approvals.
-- Privacy card includes essential-cookie reassurance.
-- Contact/beta copy polished.
+Clean GitHub/Vercel-ready package.
 
-Vercel settings:
-- Framework: Other
-- Install: npm install
-- Build: npm run build
-- Output: dist
+## What changed
+- Fixed broken hero image reference by using the existing verified asset path: `/assets/hero-device-premium-safe.png?v=400`.
+- Included the hero image in `public/assets/` under both `hero-device-premium-safe.png` and `hero-device-v4.png`.
+- Removed generated `dist/` from the source package.
+- Kept Privacy, Terms and Contact pages.
 
+## Upload instructions
+Upload the extracted contents of this folder to GitHub. Do not upload the ZIP itself.
 
-## v3.3.1 Hero coach review refresh
-- New cache-busted hero device asset (`hero-device-v331.png`).
-- Watch branding removed from face.
-- Right-side hero labels changed to cleaner sentence-case flow.
-- Coach Review visual added into the phone to show coaching/adaptation rather than only workout display.
+Do not upload any old `dist/` folder or `vercel.json`.
+
+## Vercel settings
+Framework: Other
+Install: npm install
+Build: npm run build
+Output: dist
