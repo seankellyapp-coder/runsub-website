@@ -31,3 +31,31 @@
 .signal-stack i{position:absolute;left:22px;right:22px;bottom:20px;height:6px;border-radius:999px;background:rgba(255,255,255,.08);overflow:hidden}
 .signal-stack i:before{content:"";position:absolute;left:0;top:0;bottom:0;width:var(--w);border-radius:999px;background:linear-gradient(90deg,var(--green),var(--cyan));box-shadow:0 0 20px rgba(92,243,155,.24)}
 @media(max-width:1380px){.process-arrow{width:auto;height:34px}.process-arrow:before{left:50%;right:auto;top:0;bottom:0;width:1px;height:100%}.process-arrow:after{top:auto;bottom:2px;left:calc(50% - 4px);right:auto;transform:rotate(135deg)}@keyframes pulseLine{0%{transform:translateY(0);opacity:0}20%{opacity:1}80%{opacity:1}100%{transform:translateY(28px);opacity:0}}}
+
+/* v2.12 — Coach Experience polish */
+.coach-experience{position:relative;overflow:hidden;align-items:center;padding-top:56px;padding-bottom:132px;background:radial-gradient(circle at 62% 44%,rgba(92,243,155,.095),transparent 34%),radial-gradient(circle at 84% 52%,rgba(37,221,210,.06),transparent 32%)}
+.coach-experience:before{content:"";position:absolute;right:4%;top:12%;width:760px;height:540px;background:repeating-radial-gradient(ellipse at 55% 50%,rgba(92,243,155,0) 0 34px,rgba(92,243,155,.075) 35px 36px,transparent 37px 76px);opacity:.24;filter:blur(.2px);transform:rotate(-8deg);pointer-events:none;mask-image:linear-gradient(90deg,transparent,black 18%,black 80%,transparent)}
+.coach-experience .coach-copy{position:relative;z-index:2;max-width:520px}
+.coach-experience .coach-copy h2{font-size:clamp(46px,4.2vw,78px);color:rgba(248,251,251,.86)}
+.coach-console{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:18px;min-height:560px;align-items:start}
+.coach-message,.coach-race-card{position:relative;border:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg,rgba(17,29,38,.78),rgba(6,12,16,.72));box-shadow:0 28px 84px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.04);backdrop-filter:blur(20px)}
+.coach-message{display:grid;grid-template-columns:52px 1fr;gap:18px;border-radius:30px;padding:28px;min-height:170px;overflow:hidden}
+.coach-message:after{content:"";position:absolute;inset:auto 20px 0 20px;height:2px;border-radius:999px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:.28}
+.coach-message span,.coach-race-card span{display:block;color:var(--green);letter-spacing:.19em;text-transform:uppercase;font-size:12px;font-weight:950;margin-bottom:18px}
+.coach-message p{font-size:21px;line-height:1.38;margin:0;color:#f4f9f9;font-weight:800;letter-spacing:-.025em}
+.message-icon{width:52px;height:52px;border-radius:18px;display:grid;place-items:center;font-size:22px;font-weight:950;color:#06130e;background:linear-gradient(135deg,var(--green),var(--cyan));box-shadow:0 0 42px rgba(92,243,155,.16)}
+.coach-message.recovery{margin-top:34px;border-color:rgba(37,221,210,.16)}
+.coach-message.recovery .message-icon{background:linear-gradient(135deg,#80e8ff,var(--cyan))}
+.coach-message.missed{grid-column:1 / span 1;margin-top:-8px;border-color:rgba(255,184,87,.14)}
+.coach-message.missed .message-icon{background:linear-gradient(135deg,#ffca7a,#64ef9e)}
+.coach-race-card{grid-column:1 / -1;display:grid;grid-template-columns:1.14fr .86fr;gap:28px;border-radius:34px;padding:34px;background:radial-gradient(circle at 78% 22%,rgba(92,243,155,.20),transparent 40%),linear-gradient(180deg,rgba(18,34,42,.88),rgba(6,12,16,.74));border-color:rgba(92,243,155,.18);min-height:218px;margin-top:-2px;overflow:hidden}
+.coach-race-card:before{content:"";position:absolute;right:-10%;top:-40%;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(92,243,155,.16),transparent 58%);filter:blur(22px)}
+.coach-race-card h3{position:relative;margin:0 0 14px;font-size:34px;letter-spacing:-.045em;line-height:1.05}
+.coach-race-card p{position:relative;margin:0;color:#c7d3d8;font-size:17px;line-height:1.5;font-weight:650;max-width:620px}
+.race-meter{position:relative;display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:center}
+.meter-ring{position:relative;width:142px;height:142px;border-radius:50%;display:grid;place-items:center;text-align:center;background:conic-gradient(from 220deg,var(--green) 0 81%,rgba(255,255,255,.08) 81% 100%);box-shadow:0 0 60px rgba(92,243,155,.13)}
+.meter-ring:after{content:"";position:absolute;inset:10px;border-radius:50%;background:#071015;border:1px solid rgba(255,255,255,.12)}
+.meter-ring b,.meter-ring small{position:relative;z-index:1;display:block}.meter-ring b{font-size:34px;letter-spacing:-.05em}.meter-ring small{text-transform:uppercase;letter-spacing:.16em;color:#9fb0b8;font-size:10px;font-weight:950;margin-top:-32px}
+.race-meter svg{width:100%;height:82px;overflow:visible}.race-meter path{fill:none;stroke:url(#none);stroke-width:0}.race-meter svg path{stroke:var(--cyan);stroke-width:4;stroke-linecap:round;filter:drop-shadow(0 0 10px rgba(37,221,210,.4));opacity:.9}
+@media(max-width:1380px){.coach-console{grid-template-columns:1fr}.coach-message.recovery,.coach-message.missed{margin-top:0}.coach-race-card{grid-template-columns:1fr}.race-meter{grid-template-columns:140px 1fr}}
+@media(max-width:920px){.coach-experience{padding-top:44px;padding-bottom:86px}.coach-message{grid-template-columns:44px 1fr;padding:22px;border-radius:24px;min-height:auto}.message-icon{width:44px;height:44px;border-radius:15px}.coach-message p{font-size:18px}.coach-race-card{padding:24px;border-radius:26px}.race-meter{grid-template-columns:1fr}.meter-ring{width:128px;height:128px}.race-meter svg{display:none}}
