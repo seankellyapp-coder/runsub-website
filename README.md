@@ -18,9 +18,3 @@ Framework: Other
 Install: npm install
 Build: npm run build
 Output: dist
-
-
-## Latest update
-- Replaced the hero device visual with a more premium RunSub hub-style app screen, stronger colour, coach feedback, and a clean watch without RunSub branding.
-- Kept the right-side training flow text clean and minimal.
-- Added `/public/assets/app-hub-screen-premium.png` as the source-style hub screen asset.
