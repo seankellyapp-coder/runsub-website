@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 48" role="img" aria-label="TrainingPeaks">
-  <g fill="#a8adb3" opacity=".95" transform="translate(4 10)">
-    <path d="M0 24 14 0h9L9 24z"/>
-    <path d="M18 24 32 0h9L27 24z" opacity=".72"/>
-  </g>
-  <text x="58" y="33" font-family="Arial Black,Arial,sans-serif" font-size="23" font-weight="900" fill="#a8adb3" font-style="italic" letter-spacing="-.8">TRAININGPEAKS</text>
-</svg>
