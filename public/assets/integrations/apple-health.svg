@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 48" role="img" aria-label="Apple Health">
-  <g fill="#a8adb3" opacity=".95" transform="translate(10 4)">
-    <path d="M21 13c-2-6 3-11 9-13 2 6-2 11-9 13z"/>
-    <path d="M36 22c-.1-7 6-10 6-10-4-6-10-6-12-6-5-.5-9 3-12 3-2 0-6-3-10-3-5 0-10 3-12 8-5 9-1 23 3 30 3 4 6 8 10 8 4 0 5-2 10-2s6 2 10 2 7-4 10-8c3-4 4-8 5-9-.1 0-8-3-8-13z" transform="scale(.72) translate(0 0)"/>
-  </g>
-  <text x="58" y="33" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="800" fill="#a8adb3" letter-spacing="-.8">Health</text>
-</svg>
