@@ -1,3 +1,6 @@
-# RunSub website v2.8 real header gap fix
-
-Only change: moves the full hero composition noticeably closer to the header by removing grid vertical centering and reducing the hero top spacing.
+import fs from 'fs';
+fs.rmSync('dist', { recursive: true, force: true });
+fs.mkdirSync('dist', { recursive: true });
+fs.cpSync('index.html', 'dist/index.html');
+fs.cpSync('src', 'dist/src', { recursive: true });
+fs.cpSync('public/assets', 'dist/assets', { recursive: true });
