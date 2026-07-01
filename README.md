@@ -21,3 +21,8 @@ npm run preview
 ## Important
 
 Do not commit `dist/` or `node_modules/`. Vercel builds `dist/` automatically.
+
+
+## v3.1 Trust + Garmin readiness
+
+Added Privacy Policy, Terms of Service and Contact/Beta request pages. Roadmap and integration wording now avoids implying approved third-party partnerships until approvals are complete.

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — RunSub</title>
+  <meta name="description" content="Contact RunSub or request beta access for the adaptive running coach." />
+  <meta name="theme-color" content="#02070a" />
+  <link rel="stylesheet" href="/src/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html#top" aria-label="RunSub home"><img src="/assets/runsub-header-logo.png" alt="RunSub — Adaptive Running Coach"></a>
+    <nav class="nav-links" aria-label="Main navigation"><a href="index.html#features">Features</a><a href="index.html#coach">Coach</a><a href="index.html#ecosystem">Integrations</a><a href="index.html#roadmap">Roadmap</a><a href="privacy.html">Privacy</a></nav>
+    <a class="nav-cta" href="#beta">Request Beta <span>→</span></a>
+  </header>
+
+  <main class="legal-main section-shell">
+    <section class="contact-layout reveal">
+      <div class="legal-hero contact-intro">
+        <p class="kicker">Contact</p>
+        <h1>Talk to RunSub.</h1>
+        <p>Questions, beta access, integration enquiries or privacy requests can be sent directly to the RunSub team.</p>
+        <div class="contact-card"><span>Email</span><a href="mailto:hello@runsub.com">hello@runsub.com</a><small>Built in Ireland.</small></div>
+      </div>
+      <form id="beta" class="beta-form" action="mailto:hello@runsub.com" method="post" enctype="text/plain">
+        <p class="kicker">Request Beta Access</p>
+        <label>Name <input type="text" name="name" placeholder="Your name"></label>
+        <label>Email <input type="email" name="email" placeholder="you@example.com"></label>
+        <label>Current goal <input type="text" name="goal" placeholder="e.g. Sub-3 marathon, first half marathon"></label>
+        <label>Training platform / watch <input type="text" name="platform" placeholder="Garmin, COROS, Apple Watch, Strava..."></label>
+        <label>Message <textarea name="message" rows="5" placeholder="Tell us what you want RunSub to help with."></textarea></label>
+        <button class="button primary" type="submit">Send request <span>→</span></button>
+        <small>This opens your email client. A connected form can be added later with Supabase or another form provider.</small>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer footer-premium section-shell"><div class="footer-brand"><img src="/assets/runsub-header-logo.png" alt="RunSub"><p>Adaptive Running Coach. Built for your next sub.</p></div><nav class="footer-links" aria-label="Footer navigation"><a href="index.html#features">Features</a><a href="index.html#coach">Coach</a><a href="index.html#ecosystem">Integrations</a><a href="index.html#roadmap">Roadmap</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a></nav><span class="footer-meta">© 2026 RunSub. Built in Ireland.</span></footer>
+  <script src="/src/main.js"></script>
+</body>
+</html>
