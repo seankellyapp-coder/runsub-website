@@ -1,28 +1,22 @@
-# RunSub Website
+# RunSub Website v3.2 — UI/Text Readiness
 
-Clean GitHub-ready RunSub marketing website.
+Build updates:
+- CTA wording changed to “Request Beta Access”.
+- Added trust signal strip under hero.
+- Integration cards are safer, name-only, and marked “Coming soon”.
+- Roadmap wording softened around device sync and approvals.
+- Privacy card includes essential-cookie reassurance.
+- Contact/beta copy polished.
 
-## Vercel settings
-
-- Framework Preset: Other
-- Install Command: npm install
-- Build Command: npm run build
-- Output Directory: dist
-- Environment Variables: none
-
-## Local test
-
-```bash
-npm install
-npm run build
-npm run preview
-```
-
-## Important
-
-Do not commit `dist/` or `node_modules/`. Vercel builds `dist/` automatically.
+Vercel settings:
+- Framework: Other
+- Install: npm install
+- Build: npm run build
+- Output: dist
 
 
-## v3.1 Trust + Garmin readiness
-
-Added Privacy Policy, Terms of Service and Contact/Beta request pages. Roadmap and integration wording now avoids implying approved third-party partnerships until approvals are complete.
+## v3.3.1 Hero coach review refresh
+- New cache-busted hero device asset (`hero-device-v331.png`).
+- Watch branding removed from face.
+- Right-side hero labels changed to cleaner sentence-case flow.
+- Coach Review visual added into the phone to show coaching/adaptation rather than only workout display.
